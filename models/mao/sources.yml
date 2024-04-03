@@ -1,0 +1,15 @@
+
+version: 2
+
+sources:
+    - name: oxford
+      database: "{{env_var('DBT_DB')}}"
+      description: "oxford database"
+      schema: raw
+      tables:
+        - name: orders
+          freshness:
+          warn_after: {count: 1, period: day}
+          error_after: {count: 3, period: day}
+          loaded_at_field: elt_inserted_timestamp    
+        - name: customers
