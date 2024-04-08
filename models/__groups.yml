@@ -1,0 +1,13 @@
+groups: 
+  - name: customer
+    owner:
+        name: Tarun Nahar
+        email: noysetuner@gmail.com
+  - name: order
+    owner:
+        name: Priya Chauhan
+        email: priya@gmail.com
+  - name: analytics
+    owner:
+        name: Tarun Nahar
+        email: noysetuner@gmail.com

@@ -1,0 +1,28 @@
+models: 
+  - name: stg_customers
+    description: customers model
+    columns:
+      - name: customer_id
+        description: customer_id is the unique key of the table
+        tests:
+          - unique
+          - not_null
+    group: customer
+    access: protected
+  - name: stg_orders
+    description: orders model
+    columns:
+      - name: order_id
+        description: order_id is the unique key of the table
+        tests:
+          - unique
+          - not_null
+    group: order
+    access: protected
+  - name: fop
+    description: analytics used model for combined order and customer
+    columns:
+      - name: order_id
+        description: order_id is the unique key of the table
+    group: analytics
+    access: protected  
